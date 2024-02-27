@@ -1,7 +1,43 @@
+import java.util.Scanner;
 
-
-public class JAVA_TP01Q01_Palindromo {
+public class TP01Q01 {
     public static void main(String[] args){
-        System.out.println("Ola mundo");
+        //variaveis e scanner
+        Scanner sc = new Scanner(System.in);
+        String text = "";
+        boolean bool;
+
+        
+        do{
+            
+            //entrada do usuario
+            text = sc.nextLine();
+
+            //metodo para verificar se eh palindromo
+            bool = palindromo(text);
+            if(bool){
+                System.out.println("SIM");
+            } else if (bool == false && !text.equals("FIM")){
+                System.out.println("NAO");
+            } 
+        }while(!text.equals("FIM"));
+
     }
+
+    static boolean palindromo(String str){
+        String reverseStr = "";
+        boolean res;
+
+        for(int i = 0; i < str.length(); i++){
+            reverseStr = str.charAt(i) + reverseStr;
+        }
+
+        
+        if(reverseStr.equals(str)){
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 }
