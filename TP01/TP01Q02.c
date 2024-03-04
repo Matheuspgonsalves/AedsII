@@ -2,46 +2,37 @@
 #include <string.h>
 #include <stdbool.h>
 
-#define TAM 50
+#define TAM 500
 
-bool isPalindromo(char text[]){
-    char c;
-    int len = strlen(text);
-    char reverseText[len];
-    printf("%d\n", len);
-    printf("%s", text);
+bool isPalindromo(char text[]){//metodo para verificar se eh palindromo
     
-    for(int i = 0, j = len-1; i < j; i++,j--){
-        c = text[i];
-        reverseText[i] = text[j];
-        reverseText[j] = c; 
+    int len = strlen(text);
+    printf("%d", len);
+    for(int i = 0, j = len-1; i < len/2; i++,j--){
+        if(text[i] == text[j]){
+            return true;
+        } else {
+            return false;
+        }
     }
 
-    printf("%s", reverseText);
-    printf("%s", text);
-
-    if(strcmp(text, reverseText)){
-        return true;
-    } else {
-        return false;
-    }
 }
 
 int main(){
-    //variaveis
-    char text[TAM];
+    //variaveis e inicializacao
+    char text[TAM] = "";
     bool isPal;
 
-    //texto de saida + entrada do usuario
-    do{
+    
+    do{//executar a entrada do usuario e chamar o metodo para verificar se eh palindromo
         printf("\nDigite a palavra ou texto: ");
-        fgets(text, TAM, stdin);
+        scanf(" %[^\n]", text);
 
         isPal = isPalindromo(text);
         
         if(isPal){
             printf("\nSIM");
-        } else if(isPal && !strncmp(text, "FIM", 3)){
+        } else {
             printf("\nNÃO");
         }
         
