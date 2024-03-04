@@ -26,7 +26,6 @@ public class TP01Q01 {
 
     static boolean palindromo(String str){
         String reverseStr = "";
-        boolean res;
 
         for(int i = 0; i < str.length(); i++){
             reverseStr = str.charAt(i) + reverseStr;
