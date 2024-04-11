@@ -1,0 +1,5 @@
+Crie uma classe Personagem seguindo todas as regras apresentadas no slide unidade01g_conceitosBasicos_introducaoOO.pdf. Sua classe terá os atributos privados id (String), name (String), alternate_names (Lista), house (String), ancestry (String), species (String), patronus (String), hogwartsStaff (Boolean), hogwartsStudent (String), actorName (String), alive (Boolean), dateOfBirth (DateTime), yearOfBirth (int), eyeColour (String), gender (String), hairColour (String), wizard (Boolean). Sua classe também terá pelo menos dois construtores, e os métodos gets, sets, clone, imprimir e ler.
+
+O método imprimir mostra os atributos do registro (ver cada linha da saída padrão) e o ler lê os atributos de um registro. Atenção para o arquivo de entrada, pois em alguns registros faltam valores e esse foi substituído pelo valor 0 (zero) ou vazio.
+
+A entrada padrão é composta por várias linhas e cada uma contém uma string indicando o id do Personagem a ser lido. A última linha da entrada contém a palavra FIM. A saída padrão também contém várias linhas, uma para cada registro contido em uma linha da entrada padrão.
